@@ -122,7 +122,8 @@ div#menu .item article h2 {
   margin: 20px 0;
 }
 div#menu .item article:hover {
-  background-color: rgb(54, 52, 52);
+  box-shadow: 10px 10px 54px rgba(72, 62, 221, 0.4);
+  transform: translateY(-2.2rem);
 }
 
 div#contact {
@@ -144,6 +145,50 @@ div#contact span {
 }
 div#contact iframe {
   align-self: baseline;
+}
+
+@media (max-width: 820px) {
+  div#nav {
+    padding: 30px;
+  }
+  div#main {
+    width: 80%;
+  }
+  div#menu {
+    width: 80%;
+  }
+  div#contact {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) {
+  div#nav {
+    padding: 40px;
+  }
+  div#main {
+    width: 100%;
+  }
+  div#menu {
+    width: 100%;
+  }
+  div#menu .item {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+  }
+  div#menu .item article {
+    padding: 30px;
+    margin: 20px;
+  }
+  div#contact {
+    width: 100%;
+  }
+  #footer {
+    height: 60px;
+    font-size: 1.2rem;
+    letter-spacing: normal;
+    text-align: start;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
