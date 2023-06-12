@@ -1,0 +1,149 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: white;
+  background-image: url("./piz.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div#nav {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 40px;
+}
+div#nav h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+div#nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div#nav ul li {
+  padding: 0 22px;
+  list-style: none;
+  position: relative;
+}
+div#nav ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: aliceblue;
+}
+div#nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 20px;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+div#nav ul li a:hover::after,
+div#nav ul li a.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+div#main {
+  width: 50vw;
+  height: auto;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #222;
+}
+div#main p {
+  font-size: 1.4rem;
+  margin: 40px 0;
+}
+div#main img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+div#footer {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  text-align: center;
+}
+div#footer a {
+  color: white;
+}
+
+div#menu {
+  width: 50vw;
+  height: auto;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid #222;
+}
+div#menu .item {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+div#menu .item article {
+  border: 1px solid #222;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid #000;
+  padding: 30px;
+  margin: 0 20px;
+}
+div#menu .item article img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+div#menu .item article h2 {
+  font-size: 1.8rem;
+  margin: 20px 0;
+}
+div#menu .item article:hover {
+  background-color: rgb(54, 52, 52);
+}
+
+div#contact {
+  width: 50vw;
+  height: auto;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+div#contact span {
+  font-size: 1.4rem;
+  margin: 20px 0;
+  align-self: self-start;
+}
+div#contact iframe {
+  align-self: baseline;
+}
+
+/*# sourceMappingURL=style.css.map */
