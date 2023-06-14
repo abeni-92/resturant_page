@@ -3,7 +3,7 @@ import Img from './images/chef.jpg';
 
 function createHome() {
 	const home = document.createElement('div');
-	home.classList.add('main');
+	// home.classList.add('main');
 
 	const p1 = document.createElement('p');
 	const img = document.createElement('img');
@@ -20,6 +20,8 @@ function createHome() {
 
 function loadHome() {
 	const main = document.getElementById('main');
+	main.classList.add("main");
+	main.textContent = "";
 	main.append(createHome());
 }
 

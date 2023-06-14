@@ -10,10 +10,14 @@ $primary-color: #909590;
 body {
 	font: 100% $font-stack;
 	color:white;
-	background-image: url('./piz.jpg');
+	background-image: url('./images/piz.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
   }
+
+#content {
+	display: relative;
+}
   
 div#nav {
 	background-color: rgba(0,0,0,0.9);
@@ -36,6 +40,7 @@ div#nav {
 				text-decoration: none;
 				font-size: 2rem;
 				color: aliceblue;
+				cursor: pointer;
 			}
 			a::after {
 				content: '';
@@ -57,7 +62,7 @@ div#nav {
 		}
 	}
 }  
-div#main {
+div.main {
 	width: 50vw;
 	height: auto;
 	margin: 60px auto;
@@ -65,6 +70,7 @@ div#main {
 	text-align: center;
 	background-color: rgba(0,0,0,0.8);
 	border: 1px solid #222;
+	animation: fadeIn 1.5s;
 	p{
 		font-size: 1.4rem;
 		margin: 40px 0;
@@ -76,24 +82,25 @@ div#main {
 		border-radius: 50%;
 	}
 }
-div#footer {
-	// clear: both;
-    // position: relative;
+div.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
 	width: 100%;
-    height: 40px;
-    // margin-top: -40px;
-	background-color: rgba(0,0,0,0.8);
-	padding: 30px;
+	padding: 1rem;
+	background-color: rgba(0,0,0,0.8);	
 	font-size: 1.2rem;
-	letter-spacing: 3px;
-	text-align: center;
-
-	a {
+	i {
+		font-size: 1.5rem;
 		color: white;
+	}
+	i:hover {
+		color: #0087ca;
 	}
 }
 
-div#menu {
+div.menu {
 	width: 50vw;
 	height: auto;
 	margin: 60px auto;
@@ -101,6 +108,7 @@ div#menu {
 	text-align: center;
 	background-color: rgba(0,0,0,0.7);
 	border: 1px solid #222;
+	animation: fadeIn 1.5s;
 	.item {
 		padding: 20px;
 		display: flex;
@@ -130,7 +138,7 @@ div#menu {
 		}
 	}
 }
-div#contact {
+div.contact {
 	width: 50vw;
 	height: auto;
 	margin: 60px auto;
@@ -141,30 +149,47 @@ div#contact {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	animation: fadeIn 1.5s ease-in;
 	span {
 		font-size: 1.4rem;
-		margin: 20px 0;
-		align-self: self-start;
+		margin: 10px;
+		align-self: flex-start;
+		padding: 10px;
 	}
 	iframe {
 		align-self: baseline;
+		margin-top: 10px;
 	}
 }
+
+@keyframes fadeIn {
+	0% {
+	  opacity: 0;
+	}
+  
+	100% {
+	  opacity: 1;
+	}
+  }
 
 // responsive design for medium size
 @media (max-width:820px) {
 	div#nav {
 		padding: 30px;
 	}
-	div#main {
+	div.main {
 		width: 80%;
 	}
-	div#menu {
+	div.menu {
 		width: 80%;
 	}
-	div#contact {
+	div.contact {
 		width: 80%;
+		span {
+			font-size: 1.1rem;
+		}
 	}
+
 }
 
 // responsive deisgn for small size 
@@ -172,10 +197,10 @@ div#contact {
 	div#nav {
 		padding: 40px;
 	}
-	div#main {
+	div.main {
 		width: 100%;
 	}
-	div#menu {
+	div.menu {
 		width: 100%;
 		.item {
 				display: flex;
@@ -187,10 +212,13 @@ div#contact {
 				}
 		}
 	}
-	div#contact{
+	div.contact{
 		width: 100%;
+		span {
+			display: block;
+		}
 	}
-	#footer {
+	.footer {
 		height: 60px;
 		font-size: 1.2rem;
 		letter-spacing: normal;
