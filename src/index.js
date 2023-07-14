@@ -1,7 +1,6 @@
 import './style.css';
-import Img from './images/chef.jpg';
 
-import loadHome from './home.js';
+import loadHome from './home';
 import loadMenu from './menu';
 import loadContact from './contact';
 
@@ -100,12 +99,10 @@ function createFooter() {
 	return footer;
   }
   
-  const content = document.getElementById("content");
+  const content = document.querySelector('body');
   
-  content.append(createNav());
-  content.append(createMain());
-  content.append(createFooter());
-
+  content.append(createNav(), createMain(), createFooter());
+ 
   loadHome();
   
 //   console.log(nav);

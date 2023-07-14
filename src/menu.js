@@ -10,6 +10,7 @@ import Pizza6 from './images/pizza6.jpg';
 function createMenu() {
 	const menu = document.createElement('div');
 	menu.setAttribute("id", "menu");
+	// menu.classList.add("menu");
 
 	const article1 = createArticle('Salsiccia', Pizza1, 'Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil');
 	const article2 = createArticle('Gamberi', Pizza2, 'Tomato sauce, Mozarella, Tomato, Homemade sausage, Garlic, Basil');
