@@ -1,8 +1,16 @@
 import './style.css';
 
+
+import { library, dom } from "@fortawesome/fontawesome-svg-core";
+import {faGithub} from "@fortawesome/free-brands-svg-icons/faGithub";
+
+
 import loadHome from './home';
 import loadMenu from './menu';
 import loadContact from './contact';
+
+library.add(faGithub);
+dom.watch();
 
 function createNav() {
 	const nav = document.createElement('div');
@@ -87,9 +95,10 @@ function createFooter() {
 	
 	const githubLink = document.createElement("a");
 	githubLink.href = "https://github.com/abeni-92";
-	
+	githubLink.target = "_blank";
+
 	const githubIcon = document.createElement("i");
-	githubIcon.classList.add("fab");
+	githubIcon.classList.add("fa-brands");
 	githubIcon.classList.add("fa-github");
 	
 	githubLink.appendChild(githubIcon);

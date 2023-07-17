@@ -92,12 +92,13 @@ div.footer {
 	padding: 1rem;
 	background-color: rgba(0,0,0,0.85);	
 	font-size: 1.2rem;
-	i {
+	a {
 		font-size: 1.5rem;
 		color: white;
+		transition: transform 0.2s ease-in-out;
 	}
-	i:hover {
-		color: #0087ca;
+	a:hover {
+		transform: scale(1.2);
 	}
 }
 
